@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-cluster-examples",
+  "version": "1.0.0",
+  "description": "Code examples related with NodeJS cluster module",
+  "scripts": {
+    "lint": "standard | snazzy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acanimal/nodejs-cluster-examples.git"
+  },
+  "keywords": [
+    "node",
+    "cluster",
+    "module"
+  ],
+  "author": "Antonio Santiago <asantiagop@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acanimal/nodejs-cluster-examples/issues"
+  },
+  "homepage": "https://github.com/acanimal/nodejs-cluster-examples#readme",
+  "devDependencies": {
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}

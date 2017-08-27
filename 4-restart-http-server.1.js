@@ -13,8 +13,16 @@ function masterProcess () {
 
   for (let i = 0; i < numCPUs; i++) {
     console.log(`Forking process number ${i}...`)
+
     cluster.fork()
   }
+
+  cluster.on('exit', (worker, code, signal) => {
+    console.log(`Worker ${worker.process.pid} died`)
+    console.log(`Forking a new process...`)
+
+    cluster.fork()
+  })
 }
 
 function childProcess () {
@@ -23,5 +31,7 @@ function childProcess () {
   http.createServer((req, res) => {
     res.writeHead(200)
     res.end('Hello World')
+
+    process.exit(1)
   }).listen(3000)
 }
